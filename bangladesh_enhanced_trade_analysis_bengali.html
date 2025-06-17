@@ -1,0 +1,682 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বাংলাদেশ বাণিজ্য বিশ্লেষণ - বর্ধিত রিপোর্ট</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Noto Sans Bengali', 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+            line-height: 1.8;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 10px;
+        }
+        .metric-card {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            border-left: 4px solid #007bff;
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+        }
+        .metric-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #007bff;
+        }
+        .metric-label {
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+        .section {
+            margin: 40px 0;
+            padding: 20px;
+            border-radius: 8px;
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .section h2 {
+            color: #333;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+        }
+        .plot-container {
+            margin: 30px 0;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+        .highlight-box {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+            border-left: 4px solid #2196f3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🇧🇩 বাংলাদেশের আন্তর্জাতিক বাণিজ্য</h1>
+            <h2>বর্ধিত বিশ্লেষণ রিপোর্ট</h2>
+            <p>বাণিজ্যিক অংশীদার, উদীয়মান বাজার এবং পণ্য বিশ্লেষণ</p>
+            <p><em>June 17, 2025 তারিখে তৈরি</em></p>
+        </div>
+        
+        <div class="section">
+            <h2>📊 মূল পরিসংখ্যান</h2>
+            <div style="text-align: center;">
+                <div class="metric-card">
+                    <div class="metric-value">$713.2B</div>
+                    <div class="metric-label">মোট রপ্তানি</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">$903.1B</div>
+                    <div class="metric-label">মোট আমদানি</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">$-189.9B</div>
+                    <div class="metric-label">বাণিজ্য ভারসাম্য</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">20</div>
+                    <div class="metric-label">প্রধান রপ্তানি গন্তব্য</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">20</div>
+                    <div class="metric-label">প্রধান আমদানি উৎস</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🌍 বাণিজ্যিক অংশীদার বিশ্লেষণ</h2>
+            <div class="plot-container">
+                <div>                            <div id="5347d6a3-655d-4aa4-a7ef-fa248273f66b" class="plotly-graph-div" style="height:800px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("5347d6a3-655d-4aa4-a7ef-fa248273f66b")) {                    Plotly.newPlot(                        "5347d6a3-655d-4aa4-a7ef-fa248273f66b",                        [{"marker":{"color":"green"},"name":"রপ্তানি (বিলিয়ন USD)","orientation":"h","x":[134.205030600258,105.17438992088584,64.04921896851695,43.62344594165042,41.4126625611706,26.009935072854486,22.745477000071826,22.711408533879286,22.566644405025233,18.92170039028385],"xaxis":"x","y":["USA","Germany","United Kingdom","France","Spain","Italy","Poland","Netherlands","Canada","Japan"],"yaxis":"y","type":"bar"},{"marker":{"color":"red"},"name":"আমদানি (বিলিয়ন USD)","orientation":"h","x":[226.5661750868007,129.72587893185738,52.1989456507292,39.0108147859005,33.91566633183974,33.04460443233866,30.599774954220457,27.03849509909191,26.01960120722904,25.9823386400008],"xaxis":"x2","y":["China","India","Singapore","Indonesia","Japan","Malaysia","Rep. of Korea","Thailand","USA","China, Hong Kong SAR"],"yaxis":"y2","type":"bar"},{"marker":{"color":"blue","size":8},"mode":"markers+text","name":"উদীয়মান রপ্তানি","text":["Mozambique","Guatemala","Malta","Hungary","Guyana","Senegal","Mauritania","Israel","Central African Rep.","Oman","Croatia","Madagascar","Honduras","Ecuador","Paraguay"],"textposition":"top center","x":[18.881364009714797,65.7363894764089,11.0863290044111,177.6471774951808,1.0596309911900001,1.88772299686,3.0421469010299997,369.9582393915001,2.9699750099999997,47.0003251818846,125.1151547132465,28.099879776714996,32.089496778378006,103.2539612374717,27.5874769156313],"xaxis":"x3","y":[2705.5298222793663,2013.4977487936505,1932.5134153812376,677.1251074217532,556.0820127308754,512.8772734861658,477.96995469717086,454.20113646943037,424.78685480154377,405.2461832216262,312.7528524461164,257.47401782053936,246.87755328114457,230.47341236314676,227.1222621259789],"yaxis":"y3","type":"scatter"},{"marker":{"color":"orange","size":8},"mode":"markers+text","name":"উদীয়মান আমদানি","text":["Lao People's Dem. Rep.","Mauritania","Honduras","Colombia","Mozambique","Kazakhstan","Ecuador","Croatia","Ethiopia","Azerbaijan","Romania","Serbia","Madagascar","Gabon","Costa Rica"],"textposition":"top center","x":[22.234434800063998,10.561130901799999,6.874268991818101,5.740482072983999,52.090568106976995,11.463037890003001,3.612543999,14.295958072991601,8.7242981134902,4.4689488802,151.25562401273683,4.111448018662901,5.775859896818999,13.32503592,3.5193229857797994],"xaxis":"x4","y":[60855.09723752297,1983.4761427115495,1826.8093463237708,1176.8901087138474,929.481768734951,741.7497404856149,694.5487475978917,615.708116981022,601.7749816186364,445.003922075898,434.6441430986619,385.6239136770581,380.08481103292604,317.90054294785466,317.8490762900867],"yaxis":"y4","type":"scatter"}],                        {"annotations":[{"font":{"size":16},"showarrow":false,"text":"শীর্ষ রপ্তানি গন্তব্য","x":0.225,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"শীর্ষ আমদানি উৎস","x":0.775,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"উদীয়মান রপ্তানি বাজার","x":0.225,"xanchor":"center","xref":"paper","y":0.375,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"উদীয়মান আমদানি উৎস","x":0.775,"xanchor":"center","xref":"paper","y":0.375,"yanchor":"bottom","yref":"paper"}],"height":800,"showlegend":false,"template":{"data":{"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"heatmapgl":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmapgl"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"#E5ECF6","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2}}},"title":{"text":"বাণিজ্যিক অংশীদার বিশ্লেষণ"},"xaxis":{"anchor":"y","domain":[0.0,0.45]},"yaxis":{"anchor":"x","domain":[0.625,1.0]},"xaxis2":{"anchor":"y2","domain":[0.55,1.0]},"yaxis2":{"anchor":"x2","domain":[0.625,1.0]},"xaxis3":{"anchor":"y3","domain":[0.0,0.45]},"yaxis3":{"anchor":"x3","domain":[0.0,0.375]},"xaxis4":{"anchor":"y4","domain":[0.55,1.0]},"yaxis4":{"anchor":"x4","domain":[0.0,0.375]}},                        {"responsive": true}                    )                };                            </script>        </div>
+            </div>
+            
+            <div class="highlight-box">
+                <h4>🎯 মূল অন্তর্দৃষ্টি</h4>
+                <ul>
+                    <li><strong>শীর্ষ রপ্তানি গন্তব্য:</strong> USA ($134.2B)</li>
+                    <li><strong>শীর্ষ আমদানি উৎস:</strong> China ($226.6B)</li>
+                    <li><strong>উদীয়মান বাজার:</strong> 15 টি নতুন রপ্তানি সুযোগ চিহ্নিত</li>
+                    <li><strong>নতুন সরবরাহকারী:</strong> 15 টি নতুন আমদানি উৎস</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📦 শীর্ষ বাণিজ্যিক অংশীদার</h2>
+            
+            <h3>🚀 রপ্তানি গন্তব্য</h3>
+            <table>
+                <tr><th>র‍্যাঙ্ক</th><th>দেশ</th><th>মূল্য (USD)</th><th>পণ্য সংখ্যা</th><th>বাণিজ্য সময়কাল</th></tr>
+        
+                <tr>
+                    <td>1</td>
+                    <td>USA</td>
+                    <td>$134,205,030,600</td>
+                    <td>2133</td>
+                    <td>29 বছর</td>
+                </tr>
+            
+                <tr>
+                    <td>2</td>
+                    <td>Germany</td>
+                    <td>$105,174,389,921</td>
+                    <td>2166</td>
+                    <td>29 বছর</td>
+                </tr>
+            
+                <tr>
+                    <td>3</td>
+                    <td>United Kingdom</td>
+                    <td>$64,049,218,969</td>
+                    <td>2019</td>
+                    <td>29 বছর</td>
+                </tr>
+            
+                <tr>
+                    <td>4</td>
+                    <td>France</td>
+                    <td>$43,623,445,942</td>
+                    <td>1851</td>
+                    <td>29 বছর</td>
+                </tr>
+            
+                <tr>
+                    <td>5</td>
+                    <td>Spain</td>
+                    <td>$41,412,662,561</td>
+                    <td>1491</td>
+                    <td>29 বছর</td>
+                </tr>
+            
+                <tr>
+                    <td>6</td>
+                    <td>Italy</td>
+                    <td>$26,009,935,073</td>
+                    <td>1613</td>
+                    <td>29 বছর</td>
+                </tr>
+            
+                <tr>
+                    <td>7</td>
+                    <td>Poland</td>
+                    <td>$22,745,477,000</td>
+                    <td>1385</td>
+                    <td>29 বছর</td>
+                </tr>
+            
+                <tr>
+                    <td>8</td>
+                    <td>Netherlands</td>
+                    <td>$22,711,408,534</td>
+                    <td>2503</td>
+                    <td>29 বছর</td>
+                </tr>
+            
+                <tr>
+                    <td>9</td>
+                    <td>Canada</td>
+                    <td>$22,566,644,405</td>
+                    <td>2116</td>
+                    <td>29 বছর</td>
+                </tr>
+            
+                <tr>
+                    <td>10</td>
+                    <td>Japan</td>
+                    <td>$18,921,700,390</td>
+                    <td>1497</td>
+                    <td>29 বছর</td>
+                </tr>
+            
+            </table>
+            
+            <h3>📥 আমদানি উৎস</h3>
+            <table>
+                <tr><th>র‍্যাঙ্ক</th><th>দেশ</th><th>মূল্য (USD)</th><th>পণ্য সংখ্যা</th><th>বাণিজ্য সময়কাল</th></tr>
+        
+                <tr>
+                    <td>1</td>
+                    <td>China</td>
+                    <td>$226,566,175,087</td>
+                    <td>4583</td>
+                    <td>29 বছর</td>
+                </tr>
+            
+                <tr>
+                    <td>2</td>
+                    <td>India</td>
+                    <td>$129,725,878,932</td>
+                    <td>4803</td>
+                    <td>29 বছর</td>
+                </tr>
+            
+                <tr>
+                    <td>3</td>
+                    <td>Singapore</td>
+                    <td>$52,198,945,651</td>
+                    <td>4484</td>
+                    <td>29 বছর</td>
+                </tr>
+            
+                <tr>
+                    <td>4</td>
+                    <td>Indonesia</td>
+                    <td>$39,010,814,786</td>
+                    <td>3025</td>
+                    <td>29 বছর</td>
+                </tr>
+            
+                <tr>
+                    <td>5</td>
+                    <td>Japan</td>
+                    <td>$33,915,666,332</td>
+                    <td>3720</td>
+                    <td>29 বছর</td>
+                </tr>
+            
+                <tr>
+                    <td>6</td>
+                    <td>Malaysia</td>
+                    <td>$33,044,604,432</td>
+                    <td>3720</td>
+                    <td>29 বছর</td>
+                </tr>
+            
+                <tr>
+                    <td>7</td>
+                    <td>Rep. of Korea</td>
+                    <td>$30,599,774,954</td>
+                    <td>3958</td>
+                    <td>28 বছর</td>
+                </tr>
+            
+                <tr>
+                    <td>8</td>
+                    <td>Thailand</td>
+                    <td>$27,038,495,099</td>
+                    <td>4320</td>
+                    <td>29 বছর</td>
+                </tr>
+            
+                <tr>
+                    <td>9</td>
+                    <td>USA</td>
+                    <td>$26,019,601,207</td>
+                    <td>4070</td>
+                    <td>29 বছর</td>
+                </tr>
+            
+                <tr>
+                    <td>10</td>
+                    <td>China, Hong Kong SAR</td>
+                    <td>$25,982,338,640</td>
+                    <td>3825</td>
+                    <td>29 বছর</td>
+                </tr>
+            
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>🏭 পণ্য বিশ্লেষণ</h2>
+            <div class="plot-container">
+                <div>                            <div id="08729a3f-fae9-4378-9663-fd0755b49d0e" class="plotly-graph-div" style="height:600px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("08729a3f-fae9-4378-9663-fd0755b49d0e")) {                    Plotly.newPlot(                        "08729a3f-fae9-4378-9663-fd0755b49d0e",                        [{"marker":{"color":"green"},"name":"রপ্তানি","orientation":"h","x":[91.06090459030862,82.99315046300556,49.53769015862948,45.807594369138414,39.088538168486714,33.200911130891065,15.628063907242698,15.49550578121451,11.143396563180406,10.540223745773375],"xaxis":"x","y":["T-shirts, singlets and other vests: of cotton, kni...","Trousers, bib and brace overalls, breeches and sho...","Trousers, bib and brace overalls, breeches and sho...","Jerseys, pullovers, cardigans, waistcoats and simi...","Jerseys, pullovers, cardigans, waistcoats and simi...","Shirts: men's or boys', of cotton (not knitted or ...","Trousers, bib and brace overalls, breeches and sho...","Shirts: men's or boys', of cotton, knitted or croc...","Garments and clothing accessories: babies', of cot...","Crustaceans: shrimps and prawns, frozen (whether i..."],"yaxis":"y","type":"bar"},{"marker":{"color":"red"},"name":"আমদানি","orientation":"h","x":[68.40965150846453,37.32164490306146,18.482387718757884,17.15169779001039,12.167428262938973,11.780191674488298,11.390498816961493,10.217406890223627,10.064395358340088,9.203858555160075],"xaxis":"x2","y":["Petroleum oils and oils from bituminous minerals, ...","Cotton: not carded or combed","Cereals: meslin and wheat other than durum","Vegetable oils: palm oil and its fractions, other ...","Sugars: cane sugar, raw, in solid form, not contai...","Vegetable oils: soya-bean oil and its fractions, c...","Transmission apparatus: for radio-telephony, radio...","Cement clinkers (whether or not coloured)","Vegetable oils: palm oil and its fractions, crude,...","Fabrics, woven: containing 85% or more by weight o..."],"yaxis":"y2","type":"bar"}],                        {"annotations":[{"font":{"size":16},"showarrow":false,"text":"শীর্ষ রপ্তানি পণ্য","x":0.225,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"},{"font":{"size":16},"showarrow":false,"text":"শীর্ষ আমদানি পণ্য","x":0.775,"xanchor":"center","xref":"paper","y":1.0,"yanchor":"bottom","yref":"paper"}],"height":600,"showlegend":false,"template":{"data":{"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"heatmapgl":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmapgl"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"#E5ECF6","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2}}},"title":{"text":"শীর্ষ পণ্য বিশ্লেষণ"},"xaxis":{"anchor":"y","domain":[0.0,0.45]},"yaxis":{"anchor":"x","domain":[0.0,1.0]},"xaxis2":{"anchor":"y2","domain":[0.55,1.0]},"yaxis2":{"anchor":"x2","domain":[0.0,1.0]}},                        {"responsive": true}                    )                };                            </script>        </div>
+            </div>
+            
+            <h3>📈 শীর্ষ রপ্তানি পণ্য</h3>
+            <table>
+                <tr><th>র‍্যাঙ্ক</th><th>পণ্যের নাম</th><th>মূল্য (USD)</th><th>বাজার সংখ্যা</th></tr>
+        
+                <tr>
+                    <td>1</td>
+                    <td>T-shirts, singlets and other vests: of cotton, knitted or crocheted</td>
+                    <td>$91,060,904,590</td>
+                    <td>203</td>
+                </tr>
+            
+                <tr>
+                    <td>2</td>
+                    <td>Trousers, bib and brace overalls, breeches and shorts: men's or boys', of cotton...</td>
+                    <td>$82,993,150,463</td>
+                    <td>193</td>
+                </tr>
+            
+                <tr>
+                    <td>3</td>
+                    <td>Trousers, bib and brace overalls, breeches and shorts: women's or girls', of cot...</td>
+                    <td>$49,537,690,159</td>
+                    <td>168</td>
+                </tr>
+            
+                <tr>
+                    <td>4</td>
+                    <td>Jerseys, pullovers, cardigans, waistcoats and similar articles: of cotton, knitt...</td>
+                    <td>$45,807,594,369</td>
+                    <td>164</td>
+                </tr>
+            
+                <tr>
+                    <td>5</td>
+                    <td>Jerseys, pullovers, cardigans, waistcoats and similar articles: of man-made fibr...</td>
+                    <td>$39,088,538,168</td>
+                    <td>153</td>
+                </tr>
+            
+                <tr>
+                    <td>6</td>
+                    <td>Shirts: men's or boys', of cotton (not knitted or crocheted)</td>
+                    <td>$33,200,911,131</td>
+                    <td>185</td>
+                </tr>
+            
+                <tr>
+                    <td>7</td>
+                    <td>Trousers, bib and brace overalls, breeches and shorts: women's or girls', of cot...</td>
+                    <td>$15,628,063,907</td>
+                    <td>153</td>
+                </tr>
+            
+                <tr>
+                    <td>8</td>
+                    <td>Shirts: men's or boys', of cotton, knitted or crocheted</td>
+                    <td>$15,495,505,781</td>
+                    <td>179</td>
+                </tr>
+            
+                <tr>
+                    <td>9</td>
+                    <td>Garments and clothing accessories: babies', of cotton, knitted or crocheted</td>
+                    <td>$11,143,396,563</td>
+                    <td>150</td>
+                </tr>
+            
+                <tr>
+                    <td>10</td>
+                    <td>Crustaceans: shrimps and prawns, frozen (whether in shell or not, whether or not...</td>
+                    <td>$10,540,223,746</td>
+                    <td>135</td>
+                </tr>
+            
+            </table>
+            
+            <h3>📥 শীর্ষ আমদানি পণ্য</h3>
+            <table>
+                <tr><th>র‍্যাঙ্ক</th><th>পণ্যের নাম</th><th>মূল্য (USD)</th><th>সরবরাহকারী সংখ্যা</th></tr>
+        
+                <tr>
+                    <td>1</td>
+                    <td>Petroleum oils and oils from bituminous minerals, not crude: preparations n.e.c....</td>
+                    <td>$68,409,651,508</td>
+                    <td>121</td>
+                </tr>
+            
+                <tr>
+                    <td>2</td>
+                    <td>Cotton: not carded or combed</td>
+                    <td>$37,321,644,903</td>
+                    <td>148</td>
+                </tr>
+            
+                <tr>
+                    <td>3</td>
+                    <td>Cereals: meslin and wheat other than durum</td>
+                    <td>$18,482,387,719</td>
+                    <td>50</td>
+                </tr>
+            
+                <tr>
+                    <td>4</td>
+                    <td>Vegetable oils: palm oil and its fractions, other than crude, whether or not ref...</td>
+                    <td>$17,151,697,790</td>
+                    <td>22</td>
+                </tr>
+            
+                <tr>
+                    <td>5</td>
+                    <td>Sugars: cane sugar, raw, in solid form, not containing added flavouring or colou...</td>
+                    <td>$12,167,428,263</td>
+                    <td>43</td>
+                </tr>
+            
+                <tr>
+                    <td>6</td>
+                    <td>Vegetable oils: soya-bean oil and its fractions, crude, whether or not degummed,...</td>
+                    <td>$11,780,191,674</td>
+                    <td>39</td>
+                </tr>
+            
+                <tr>
+                    <td>7</td>
+                    <td>Transmission apparatus: for radio-telephony, radio-telegraphy, radio-broadcastin...</td>
+                    <td>$11,390,498,817</td>
+                    <td>101</td>
+                </tr>
+            
+                <tr>
+                    <td>8</td>
+                    <td>Cement clinkers (whether or not coloured)</td>
+                    <td>$10,217,406,890</td>
+                    <td>45</td>
+                </tr>
+            
+                <tr>
+                    <td>9</td>
+                    <td>Vegetable oils: palm oil and its fractions, crude, not chemically modified</td>
+                    <td>$10,064,395,358</td>
+                    <td>23</td>
+                </tr>
+            
+                <tr>
+                    <td>10</td>
+                    <td>Fabrics, woven: containing 85% or more by weight of cotton, of yarns of differen...</td>
+                    <td>$9,203,858,555</td>
+                    <td>87</td>
+                </tr>
+            
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>⚖️ অংশীদারভিত্তিক বাণিজ্য ভারসাম্য</h2>
+            <div class="plot-container">
+                <div>                            <div id="8694443b-aca5-4c49-8e66-763add7cb752" class="plotly-graph-div" style="height:600px; width:100%;"></div>            <script type="text/javascript">                                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("8694443b-aca5-4c49-8e66-763add7cb752")) {                    Plotly.newPlot(                        "8694443b-aca5-4c49-8e66-763add7cb752",                        [{"marker":{"color":["red","green","red","green","green","red","red","green","green","red","green","red","red","green","red"]},"name":"বাণিজ্য ভারসাম্য","orientation":"h","x":[-213.57016827414205,108.18542939302895,-114.23546915892626,90.13025460113153,56.01022849661851,-47.9751115265359,-14.993965941555892,38.05654291312328,38.202374645236276,-37.68208414775647,15.694206845485379,-25.102635289129363,-30.07074155622738,9.119227121238556,-21.537509488301644],"y":["China","USA","India","Germany","United Kingdom","Singapore","Japan","France","Spain","Indonesia","Italy","Rep. of Korea","Malaysia","Canada","China, Hong Kong SAR"],"type":"bar"}],                        {"height":600,"template":{"data":{"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"choropleth":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"choropleth"}],"contourcarpet":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"contourcarpet"}],"contour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"contour"}],"heatmapgl":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmapgl"}],"heatmap":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"heatmap"}],"histogram2dcontour":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2dcontour"}],"histogram2d":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"histogram2d"}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"mesh3d":[{"colorbar":{"outlinewidth":0,"ticks":""},"type":"mesh3d"}],"parcoords":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"parcoords"}],"pie":[{"automargin":true,"type":"pie"}],"scatter3d":[{"line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatter3d"}],"scattercarpet":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattercarpet"}],"scattergeo":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergeo"}],"scattergl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattergl"}],"scattermapbox":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scattermapbox"}],"scatterpolargl":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolargl"}],"scatterpolar":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterpolar"}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"scatterternary":[{"marker":{"colorbar":{"outlinewidth":0,"ticks":""}},"type":"scatterternary"}],"surface":[{"colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"type":"surface"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}]},"layout":{"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"autotypenumbers":"strict","coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]],"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]},"colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"geo":{"bgcolor":"white","lakecolor":"white","landcolor":"#E5ECF6","showlakes":true,"showland":true,"subunitcolor":"white"},"hoverlabel":{"align":"left"},"hovermode":"closest","mapbox":{"style":"light"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","gridwidth":2,"linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white"}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"ternary":{"aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"bgcolor":"#E5ECF6","caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"title":{"x":0.05},"xaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2},"yaxis":{"automargin":true,"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","zerolinewidth":2}}},"title":{"text":"অংশীদারভিত্তিক বাণিজ্য ভারসাম্য (বিলিয়ন USD)"},"xaxis":{"title":{"text":"বাণিজ্য ভারসাম্য (বিলিয়ন USD)"}}},                        {"responsive": true}                    )                };                            </script>        </div>
+            </div>
+            
+            <div class="highlight-box">
+                <h4>💡 বাণিজ্য ভারসাম্য অন্তর্দৃষ্টি</h4>
+                <ul>
+                    <li><strong>উদ্বৃত্ত বাজার:</strong> 14 টি দেশের সাথে বাণিজ্য উদ্বৃত্ত</li>
+                    <li><strong>ঘাটতি বাজার:</strong> 16 টি দেশের সাথে বাণিজ্য ঘাটতি</li>
+                    <li><strong>সর্বোচ্চ উদ্বৃত্ত:</strong> USA ($108.2B)</li>
+                    <li><strong>সর্বোচ্চ ঘাটতি:</strong> China ($213.6B)</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🌟 উদীয়মান বাজার সুযোগ</h2>
+        
+            <h3>🚀 উদীয়মান রপ্তানি বাজার</h3>
+            <table>
+                <tr><th>দেশ</th><th>বৃদ্ধির হার (%)</th><th>বর্তমান মূল্য (USD)</th><th>সক্রিয় বছর</th></tr>
+            
+                    <tr>
+                        <td>Mozambique</td>
+                        <td>2705.5%</td>
+                        <td>$18,881,364</td>
+                        <td>4</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Guatemala</td>
+                        <td>2013.5%</td>
+                        <td>$65,736,389</td>
+                        <td>4</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Malta</td>
+                        <td>1932.5%</td>
+                        <td>$11,086,329</td>
+                        <td>4</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Hungary</td>
+                        <td>677.1%</td>
+                        <td>$177,647,177</td>
+                        <td>4</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Guyana</td>
+                        <td>556.1%</td>
+                        <td>$1,059,631</td>
+                        <td>4</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Senegal</td>
+                        <td>512.9%</td>
+                        <td>$1,887,723</td>
+                        <td>4</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Mauritania</td>
+                        <td>478.0%</td>
+                        <td>$3,042,147</td>
+                        <td>4</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Israel</td>
+                        <td>454.2%</td>
+                        <td>$369,958,239</td>
+                        <td>4</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Central African Rep.</td>
+                        <td>424.8%</td>
+                        <td>$2,969,975</td>
+                        <td>4</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Oman</td>
+                        <td>405.2%</td>
+                        <td>$47,000,325</td>
+                        <td>4</td>
+                    </tr>
+                </table>
+            <h3>📥 উদীয়মান আমদানি উৎস</h3>
+            <table>
+                <tr><th>দেশ</th><th>বৃদ্ধির হার (%)</th><th>বর্তমান মূল্য (USD)</th><th>সক্রিয় বছর</th></tr>
+            
+                    <tr>
+                        <td>Lao People's Dem. Rep.</td>
+                        <td>60855.1%</td>
+                        <td>$22,234,435</td>
+                        <td>2</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Mauritania</td>
+                        <td>1983.5%</td>
+                        <td>$10,561,131</td>
+                        <td>4</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Honduras</td>
+                        <td>1826.8%</td>
+                        <td>$6,874,269</td>
+                        <td>3</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Colombia</td>
+                        <td>1176.9%</td>
+                        <td>$5,740,482</td>
+                        <td>4</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Mozambique</td>
+                        <td>929.5%</td>
+                        <td>$52,090,568</td>
+                        <td>4</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Kazakhstan</td>
+                        <td>741.7%</td>
+                        <td>$11,463,038</td>
+                        <td>3</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Ecuador</td>
+                        <td>694.5%</td>
+                        <td>$3,612,544</td>
+                        <td>4</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Croatia</td>
+                        <td>615.7%</td>
+                        <td>$14,295,958</td>
+                        <td>4</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Ethiopia</td>
+                        <td>601.8%</td>
+                        <td>$8,724,298</td>
+                        <td>4</td>
+                    </tr>
+                
+                    <tr>
+                        <td>Azerbaijan</td>
+                        <td>445.0%</td>
+                        <td>$4,468,949</td>
+                        <td>4</td>
+                    </tr>
+                </table>
+        </div>
+        
+        <div class="section">
+            <h2>🎯 কৌশলগত সুপারিশ</h2>
+            
+            <div class="highlight-box">
+                <h4>✅ রপ্তানি বৃদ্ধির সুযোগ</h4>
+                <ul>
+                    <li><strong>উদীয়মান বাজার:</strong> উচ্চ বৃদ্ধির হার সহ নতুন বাজারে মনোনিবেশ করুন</li>
+                    <li><strong>পণ্য বৈচিত্র্যকরণ:</strong> বিদ্যমান বাজারে নতুন পণ্য প্রবর্তন করুন</li>
+                    <li><strong>মূল্য সংযোজন:</strong> উচ্চ মূল্যের পণ্যে স্থানান্তর করুন</li>
+                </ul>
+            </div>
+            
+            <div class="highlight-box">
+                <h4>⚠️ আমদানি অপ্টিমাইজেশন</h4>
+                <ul>
+                    <li><strong>সরবরাহকারী বৈচিত্র্যকরণ:</strong> একক উৎসের উপর নির্ভরতা কমান</li>
+                    <li><strong>স্থানীয় বিকল্প:</strong> আমদানি প্রতিস্থাপনের সুযোগ খুঁজুন</li>
+                    <li><strong>খরচ অপ্টিমাইজেশন:</strong> সাশ্রয়ী সরবরাহকারী চিহ্নিত করুন</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+            <p><em>এই বর্ধিত রিপোর্টটি বাংলাদেশের আন্তর্জাতিক বাণিজ্যের গভীর বিশ্লেষণ প্রদান করে এবং 
+            কৌশলগত সিদ্ধান্ত গ্রহণে সহায়তা করে।</em></p>
+            <p><strong>রিপোর্ট তৈরি:</strong> June 17, 2025 at 11:58 AM</p>
+        </div>
+    </div>
+</body>
+</html>
+        
